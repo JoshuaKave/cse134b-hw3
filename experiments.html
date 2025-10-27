@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Experiments</title>
+    </head>
+    <body>
+        <header>
+            <h1>HTML Element Experiments</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="experience.html">Experience</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <hr>
+        </header>
+
+        <main>
+            <section>
+                <h2>Picture Element</h2>
+                <picture>
+                    <source media="(min-width: 800px)" srcset="images/large-image.jpg">
+                    <source media="(min-width: 400px)" srcset="images/medium-image.jpg">
+                    <img src="images/small-image.jpg" alt="Picture element">
+                </picture>
+            </section>
+
+            <section>
+                <h2>Audio Element</h2>
+                <audio controls>
+                    <source src="audio/sample.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </section>
+
+            <section>
+                <h2>Video Element</h2>
+                <video controls width="640" height="360">
+                    <source src="video/sample.mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                </video>
+            </section>
+
+            <section>
+                <h2>Canvas Element</h2>
+                <canvas id="myCanvas" width="200" height="200" style="border:1px solid #000;">
+                    Your browser does not support the canvas element.
+                </canvas>
+                <script>
+                    const canvas = document.getElementById('myCanvas');
+                    const ctx = canvas.getContext('2d');
+                    ctx.fillStyle = '#4CAF50';
+                    ctx.fillRect(20, 20, 150, 100);
+                    ctx.fillStyle = '#2196F3';
+                    ctx.beginPath();
+                    ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+                    ctx.fill();
+                </script>
+            </section>
+
+            <section>
+                <h2>Template Element</h2>
+                <p>Template for a project card (not rendered until cloned with JavaScript):</p>
+                <template id="project-card-template">
+                    <article class="project-card">
+                        <h3 class="project-title">Project Title</h3>
+                        <p class="project-description">Project description goes here.</p>
+                        <ul class="project-meta">
+                            <li>Role: <span class="role"></span></li>
+                            <li>Timeline: <span class="timeline"></span></li>
+                            <li>Status: <span class="status"></span></li>
+                        </ul>
+                        <a href="#" class="project-link">View Project</a>
+                    </article>
+                </template>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Joshua Kave</p>
+        </footer>
+    </body>
+</html>
