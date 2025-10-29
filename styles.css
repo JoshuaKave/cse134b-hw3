@@ -21,6 +21,12 @@ header{
             color: white;
             padding: 0.5em 1em;
             text-decoration: none;
+            transition: background-color 200ms ease, transform 150ms ease;
+
+        }
+        a:hover {
+            background-color: #34495e;
+            transform: translateY(-3px);
         }
     }
 
