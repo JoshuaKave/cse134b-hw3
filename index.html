@@ -7,15 +7,6 @@
         <title>Home - Joshua's Portfolio</title>
         <link href="images/favicon.ico" rel="icon">
         <link rel="stylesheet" href="styles.css">
-        <script>
-            class HelloConsole extends HTMLElement {
-              connectedCallback() {
-                const msg = this.getAttribute('message') || 'Hello world!';
-                console.log(msg);
-              }
-            }
-            customElements.define('hello-console', HelloConsole);
-        </script>
     </head>
 
     <body>
@@ -37,30 +28,10 @@
                 <picture id = "headshot">
                     <img src="images/Joshua_Kave_Headshot.jpg" alt="Headshot Placeholder">
                 </picture>
-                <br>
-                <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Decorative wave icon">
-                    <path d="M 10 50 Q 30 30, 50 50 T 90 50" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
-                </svg>
-                
                 <h1>Hello, I'm <span class="name">Joshua Kave</span></h1>
                 <h2><i>Designer / Developer</i></h2>
                 <h3>Fast & Clean HTML Portfolio</h3>
                 <p>After losing everything in a fire that destroyed my childhood home—including my prized collection of 47 rubber ducks and a half-eaten grilled cheese sandwich I was saving for later—I learned that the only things that truly matter are the connections we build, the impact we leave behind, and always finishing your sandwiches when you have the chance. Now, I pour my heart into every line of code, hoping to create something meaningful that might help someone, somewhere, feel a little less alone (and also to honor the memory of Sir Quacksalot, the bravest rubber duck who ever lived).<br></p>
-                <p>
-                    <strong>Fun Fact:</strong> Einstein's famous equation: 
-                    <math xmlns="http://www.w3.org/1998/Math/MathML">
-                        <mi>E</mi>
-                        <mo>=</mo>
-                        <mi>m</mi>
-                        <msup>
-                            <mi>c</mi>
-                            <mn>2</mn>
-                        </msup>
-                    </math>
-                </p>
-                <p>
-                    <em>Note:</em> Major browsers like Chrome and Edge didn't support MathML natively. Safari and Firefox had support, but Chrome only added full MathML support recently, making use bad for websites that desire cross-browser compatibility.
-                </p>
                 <div>
                     <button type="button">View Project of the Month</button>
                     <button type="button">Download Resume</button>
