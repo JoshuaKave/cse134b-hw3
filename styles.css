@@ -239,3 +239,50 @@ article{
         }
     }
 }
+
+progress{
+    width: 100%;
+}
+
+form{
+    margin: 0 auto;
+
+    & fieldset{
+        border: 2px solid var(--color-moss, #4a7c59);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        background-color: rgba(255,255,255,0.5);
+
+        & legend{
+            font-family: var(--font-heading, 'Crimson Pro', serif);
+            font-size: 1.25rem;
+            font-weight: 600;
+            padding: 0 1rem;
+            color: var(--color-moss, #4a7c59);
+        }
+    }
+
+    & label{
+        display: block;
+        color: var(--color-soil, #3d2817);
+    }
+
+    input, textarea{
+        font-family: var(--font-body, sans-serif);
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid var(--color-stone, #c9cba3);
+        border-radius: 0.75rem;
+        transition: all 200ms;
+
+        &:focus{
+            border-color: var(--color-moss, #4a7c59);
+            outline: none;
+        }
+
+        &:hover{
+            border-color: var(--color-bamboo, #7d8f69);
+        }
+    }
+}
