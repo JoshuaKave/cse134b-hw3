@@ -285,6 +285,71 @@ form{
     }
 }
 
+project-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 3px solid var(--color-bark, #5c4033);
+  border-radius: 0.75rem;
+  padding: 2.5rem;
+  margin: 4rem auto;
+  max-width: 800px;
+  background: linear-gradient(
+    135deg,
+    var(--color-sand, #f4f1de) 0%,
+    rgba(168, 218, 220, 0.15) 100%
+  );
+  position: relative;
+  transition: all 350ms;
+
+  &:hover{
+    border-color: var(--color-moss, #4a7c59);
+  }
+
+  & h2 {
+    font-family: var(--font-heading, 'Crimson Pro', serif);
+    color: var(--color-moss, #4a7c59);
+    font-weight: 600;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-stone, #c9cba3);
+    text-wrap: balance;
+    margin: 0;
+  }
+  
+  & p {
+    color: var(--color-soil, #3d2817);
+    font-size: 1.05rem;
+    margin: 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    
+    li {
+      padding: 1rem 1.5rem;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-left: 4px solid var(--color-leaf, #6b9080);
+      border-radius: 0.5rem;
+      color: var(--color-soil, #3d2817);
+      transition: all 350ms;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      font-size: 1rem;
+      position: relative;
+      overflow: hidden;
+      
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.95);
+        transform: translateX(8px);
+        border-left-color: var(--color-moss, #4a7c59);
+      }
+    }
+  }
+}
 
 @media (max-width: 500px) {
     header{
