@@ -101,7 +101,7 @@ main{
             transparent
         );
         margin: 1.5rem 0;
-        /* animation: growLine 1s ease-out; */
+        animation: growLine 1s ease-out;
     }
 }
 
@@ -140,7 +140,7 @@ p {
   font-weight: 700;
   position: relative;
   display: inline-block;
-  /* animation: fadeInUp 0.8s ease-out; */
+  animation: fadeInUp 0.8s ease-out;
 }
 
 #headshot{
@@ -152,7 +152,6 @@ p {
         box-shadow: var(--shadow-lg, 0 8px 32px rgba(0,0,0,0.2));
         object-fit: cover;
         transition: transform var(--transition-slow, 600ms);
-        /* animation: float 6s ease-in-out infinite; */
         
         &:hover {
             transform: scale(1.05) rotate(2deg);
@@ -301,4 +300,35 @@ form{
             }
         }
     }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes growLine {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
