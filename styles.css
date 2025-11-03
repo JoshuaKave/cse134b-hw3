@@ -162,7 +162,7 @@ p {
 }
 
 button{
-    font-family: var(--font-bodym sans-serif);
+    font-family: var(--font-body, sans-serif);
     font-size: 1rem;
     padding: 1rem 1.5rem;
     margin: 0.5rem;
@@ -282,6 +282,23 @@ form{
 
         &:hover{
             border-color: var(--color-bamboo, #7d8f69);
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    header{
+        nav {
+            padding: 0.25rem;
+            gap: 0.075rem;
+            flex-wrap: wrap;
+
+            & a {
+                padding: 0.25rem 0.6rem;
+                font-size: 0.75rem;
+                border-radius: 0.5rem;
+            }
         }
     }
 }
