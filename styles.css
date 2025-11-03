@@ -302,6 +302,34 @@ form{
     }
 }
 
+@media print {
+  header, footer, button {
+    display: none;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  article {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+@media (prefers-contrast: more) {
+  * {
+    --color-soil: #000000;
+    --color-sand: #ffffff;
+    font-weight: 700;
+  }
+  
+  button, article {
+    border-width: 3px;
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
