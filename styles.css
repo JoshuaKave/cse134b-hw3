@@ -117,7 +117,7 @@ h1 {
   font-weight: 700;
   color: var(--color-soil, #3d2817);
   margin-bottom: 1.5rem;
-  text-wrap: balance; /*baseline feature*/
+  text-wrap: balance;
   line-height: 1.2;
 }
 
@@ -139,7 +139,7 @@ h3 {
 p {
     margin-bottom: 1rem;
     max-width: 70ch;
-    text-wrap: pretty; /*baseline feature*/
+    text-wrap: pretty;
 }
 
 .name {
@@ -243,46 +243,46 @@ article{
 }
 
 form{
-    margin: 0 auto;
+  margin: 0 auto;
+}
 
-    & fieldset{
-        border: 2px solid var(--color-moss, #4a7c59);
-        border-radius: 0.75rem;
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
-        background-color: rgba(255,255,255,0.5);
+fieldset:has(legend){
+  border: 2px solid var(--color-moss, #4a7c59);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: rgba(255,255,255,0.5);
+}
 
-        & legend{
-            font-family: var(--font-heading, 'Crimson Pro', serif);
-            font-size: 1.25rem;
-            font-weight: 600;
-            padding: 0 1rem;
-            color: var(--color-moss, #4a7c59);
-        }
-    }
+fieldset legend{
+  font-family: var(--font-heading, 'Crimson Pro', serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0 1rem;
+  color: var(--color-moss, #4a7c59);
+}
 
-    & label{
-        display: flex;
-        color: var(--color-soil, #3d2817);
-    }
+form:has(label) label{
+  display: flex;
+  color: var(--color-soil, #3d2817);
+}
 
-    input, textarea{
-        font-family: var(--font-body, sans-serif);
-        width: 100%;
-        padding: 1rem;
-        border: 2px solid var(--color-stone, #c9cba3);
-        border-radius: 0.75rem;
-        transition: all 200ms;
+form:has(input) input, form:has(textarea) textarea{
+  font-family: var(--font-body, sans-serif);
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--color-stone, #c9cba3);
+  border-radius: 0.75rem;
+  transition: all 200ms;
+}
 
-        &:focus{
-            border-color: var(--color-moss, #4a7c59);
-            outline: none;
-        }
+form:has(input) input:focus, form:has(textarea) textarea:focus{
+  border-color: var(--color-moss, #4a7c59);
+  outline: none;
+}
 
-        &:hover{
-            border-color: var(--color-bamboo, #7d8f69);
-        }
-    }
+form:has(input) input:hover, form:has(textarea) textarea:hover{
+  border-color: var(--color-bamboo, #7d8f69);
 }
 
 project-summary {
@@ -349,6 +349,18 @@ project-summary {
       }
     }
   }
+}
+
+iframe{
+    border: 3px solid var(--color-bark, #5c4033);
+    border-radius: 1rem;
+    width: 100%;
+    height: 400px;
+    transition: all 350ms;
+
+    &:hover{
+        border-color: var(--color-moss, #4a7c59);
+    }
 }
 
 @media (max-width: 500px) {
