@@ -73,8 +73,7 @@ header{
 
             &:hover{
                 transform: translateY(-2px);
-                background-color: color-mix(in srgb, var(--color-bark) 90%, var(--color-moss) 10%);
-
+                
                 &::before{
                     width: 80%;
                 }
