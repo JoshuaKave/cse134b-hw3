@@ -96,7 +96,7 @@ main{
     & p{
         margin: 0 auto 1rem;
         text-align: center;
-        }
+    }
 
     hr {
         border: none;
@@ -137,9 +137,9 @@ h3 {
 }
 
 p {
-    margin-bottom: 1rem;
-    max-width: 70ch;
-    text-wrap: pretty;
+  margin-bottom: 1rem;
+  max-width: 70ch;
+  text-wrap: pretty;
 }
 
 .name {
@@ -162,6 +162,19 @@ p {
         }
     }
 
+}
+
+.logo-image {
+    display: block;
+    margin: 0 auto 1rem;
+    max-width: 100%;
+
+    img {
+        width: 100%;
+        max-width: 50%;
+        height: auto;
+        border-radius: 1rem;
+    }
 }
 
 button{
@@ -214,6 +227,22 @@ footer{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
     width: 100%;
+
+}
+
+.grid>article{
+    transition: all 350ms;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    &:hover{
+        border-color: var(--color-moss, #4a7c59);
+        transform: translateY(-5px);
+    }
+
+
 }
 
 article{
