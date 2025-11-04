@@ -30,15 +30,15 @@ body{
     line-height: 1.7;
     color: var(--color-soil, #3d2817);
     background: linear-gradient(
-        var(--color-sky, #e8f4f8),
-        var(--color-sand, #f4f1de)
+        color-mix(in srgb, var(--color-sky) 90%, var(--color-water) 10%),
+        color-mix(in srgb, var(--color-sand) 95%, var(--color-accent) 5%)
     );
     min-width: 100%;
     min-height: 100vh;
 }
 
 header{
-    background-color: var(--color-bark, #5c4033);
+    background-color: color-mix(in srgb, var(--color-bark) 95%, var(--color-soil) 5%);
     position: sticky;
     top: 0;
     z-index: 10;
@@ -66,13 +66,14 @@ header{
                 left:50%;
                 width: 0;
                 height:2px;
-                background-color: var(--color-bamboo, #7d8f69);
+                background-color: color-mix(in srgb, var(--color-bamboo) 80%, var(--color-accent) 20%);
                 transform: translateX(-50%);
                 transition: width 350ms;
             }
 
             &:hover{
                 transform: translateY(-2px);
+                background-color: color-mix(in srgb, var(--color-bark) 90%, var(--color-moss) 10%);
 
                 &::before{
                     width: 80%;
@@ -129,13 +130,6 @@ h2 {
   text-wrap: balance;
 }
 
-h3 {
-  font-family: var(--font-heading, 'Crimson Pro', serif);  
-  font-weight: 600;
-  color: var(--color-moss, #4a7c59);
-  margin-bottom: 1rem;
-}
-
 p {
   margin-bottom: 1rem;
   max-width: 70ch;
@@ -182,7 +176,7 @@ button{
     font-size: 1rem;
     padding: 1rem 1.5rem;
     margin: 0.5rem;
-    background-color: var(--color-moss, #4a7c59);
+    background-color: color-mix(in srgb, var(--color-moss) 85%, var(--color-leaf) 15%);
     color: var(--color-sand, #f4f1de);
     border-radius: 0.75rem;
     cursor: pointer;
@@ -190,6 +184,7 @@ button{
     position: relative;
 
     &:hover{
+        background-color: color-mix(in srgb, var(--color-moss) 75%, var(--color-accent) 25%);
         transform: translateY(-3px);
     }
 
@@ -249,7 +244,7 @@ article{
     background: linear-gradient(
         to bottom,
         var(--color-sand, #f4f1de),
-        rgba(201, 203, 163, 0.3)
+        color-mix(in srgb, var(--color-stone) 30%, transparent)
     );
 
     border: 3px solid var(--color-bark, #5c4033);
@@ -280,7 +275,7 @@ fieldset:has(legend){
   border-radius: 0.75rem;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  background-color: rgba(255,255,255,0.5);
+  background-color: color-mix(in srgb, white 50%, var(--color-sky) 10%);
 }
 
 fieldset legend{
@@ -326,7 +321,7 @@ project-summary {
   background: linear-gradient(
     135deg,
     var(--color-sand, #f4f1de) 0%,
-    rgba(168, 218, 220, 0.15) 100%
+    color-mix(in srgb, var(--color-water) 15%, transparent) 100%
   );
   position: relative;
   transition: all 350ms;
@@ -361,18 +356,17 @@ project-summary {
     
     li {
       padding: 1rem 1.5rem;
-      background-color: rgba(255, 255, 255, 0.7);
+      background-color: color-mix(in srgb, white 70%, var(--color-sand) 30%);
       border-left: 4px solid var(--color-leaf, #6b9080);
       border-radius: 0.5rem;
       color: var(--color-soil, #3d2817);
       transition: all 350ms;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       font-size: 1rem;
       position: relative;
       overflow: hidden;
       
       &:hover {
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: color-mix(in srgb, white 95%, var(--color-moss) 5%);
         transform: translateX(8px);
         border-left-color: var(--color-moss, #4a7c59);
       }
@@ -385,11 +379,6 @@ iframe{
     border-radius: 1rem;
     width: 100%;
     height: 400px;
-    transition: all 350ms;
-
-    &:hover{
-        border-color: var(--color-moss, #4a7c59);
-    }
 }
 
 @media (max-width: 500px) {
@@ -453,16 +442,5 @@ iframe{
   }
   to {
     transform: scaleX(1);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
